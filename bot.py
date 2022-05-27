@@ -22,15 +22,15 @@ spam_chats = []
 async def start(event):
   await event.reply(
     "__**I'm STARTED**",
-    link_preview=False
-
+    link_preview=False,
+)
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "**Help Menu of MentionAllBot**\n\nCommand: /mentionall\n__You can use this command with text what you want to mention others.__\n`Example: /mentionall Good Morning!`\n__You can you this command as a reply to any message. Bot will mention to all 😄"
   await event.reply(
     helptext,
-    link_preview=False
-  
+    link_preview=False,
+)  
 @client.on(events.NewMessage(pattern="^/mentionall ?(.*)"))
 async def mentionall(event):
   chat_id = event.chat_id
